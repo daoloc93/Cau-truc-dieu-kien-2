@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        th, tr, td {
+            border: solid black 1px;
+            margin: 10px;
+            text-align: center;
+        }
+        table {
+            border: solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <td colspan="4"><input id="screen" type="text"></td>
+    </tr>
+
+    <tr>
+        <td onclick="nhapso(2)">1</td>
+        <td onclick="nhapso(2)">2</td>
+        <td onclick="nhapso(3)">3</td>
+        <td onclick="nhapso('+')">+</td>
+    </tr>
+
+    <tr>
+        <td onclick="nhapso('4')">4</td>
+        <td onclick="nhapso('5')">5</td>
+        <td onclick="nhapso('6')">6</td>
+        <td onclick="nhapso('-')">-</td>
+    </tr>
+
+    <tr>
+        <td onclick="nhapso('7')">7</td>
+        <td onclick="nhapso('8')">8</td>
+        <td onclick="nhapso('9')">9</td>
+        <td onclick="nhapso('*')">x</td>
+    </tr>
+
+    <tr>
+        <td onclick="xoa()">C</td>
+        <td onclick="nhapso('0')">0</td>
+        <td onclick="tinh()">=</td>
+        <td onclick="nhapso('/')">/</td>
+    </tr>
+</table>
+
+<script>
+
+    function nhapso(data) {
+        document.getElementById("screen").value += data;
+    }
+
+    function xoa() {
+        document.getElementById("screen").value = "";
+    }
+
+    function tinh() {
+        document.getElementById("screen").value = eval(document.getElementById("screen").value)
+    }
+
+</script>
+
+</body>
+</html>
